@@ -424,75 +424,75 @@ th {
 }
 
 body, html {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 body, div, span, a, img, h1, h2, h3, h4, h5 {
-  box-sizing: border-box;
-  position: relative;
+    box-sizing: border-box;
+    position: relative;
 
-  display: -webkit-box;
+    display: -webkit-box;
 
-  display: -webkit-flex;
+    display: -webkit-flex;
 
-  display: -ms-flexbox;
+    display: -ms-flexbox;
 
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-  -webkit-align-content: flex-start;
-      -ms-flex-line-pack: start;
-          align-content: flex-start;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    -webkit-align-content: flex-start;
+        -ms-flex-line-pack: start;
+            align-content: flex-start;
 
-  border: 0 solid black;
-  margin: 0;
-  padding: 0;
+    border: 0 solid black;
+    margin: 0;
+    padding: 0;
 }
 
 * {
-  position: relative;
+    position: relative;
 }
 
 body {
-  background-color: #F7F8FA;
-  /*background-color: #FFFFFF;*/
-  color: #202020;
-  font-family: "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 100;
+    background: url("../img/bg.jpg") no-repeat bottom;
+    background-size: 100% 50%;
+    color: #202020;
+    font-family: "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 100;
 }
 
 h1 {
-  font-size: 64px;
-  font-weight: 100;
+    font-size: 64px;
+    font-weight: 100;
 }
 
 h2 {
-  font-size: 48px;
-  font-weight: 100;
+    font-size: 48px;
+    font-weight: 100;
 }
 
 h3 {
-  font-size: 24px;
-  font-weight: 100;
+    font-size: 24px;
+    font-weight: 100;
 }
 
 p {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 a {
-  font-weight: 400;
+    font-weight: 400;
 }
 
 /*a:hover {
@@ -503,16 +503,18 @@ a {
 */
 
 .site {
-    height: 150%;
+    height: 100%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
+    background: -webkit-linear-gradient(top, #F7F8FA 50%, transparent);
+    background: linear-gradient(to bottom, #F7F8FA 50%, transparent);
 }
 
 .site__main {
-    height: 150%;
+    height: 100%;
     -webkit-flex-basis: 70%;
         -ms-flex-preferred-size: 70%;
             flex-basis: 70%;
@@ -528,9 +530,8 @@ a {
     position: fixed;
     width: 30%;
     height: 100%;
-    -webkit-flex-basis: 30%;
-        -ms-flex-preferred-size: 30%;
-            flex-basis: 30%;
+    /*background-color: #C4CCDA;*/
+    /*padding: 0 20px 20px;*/
 }
 
 .site__left-sidebar {
@@ -550,7 +551,6 @@ a {
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
             align-items: flex-start;
-    background-color: rgba(0,255,0,0.3);
 }
 
 .site__content {
@@ -561,7 +561,6 @@ a {
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    background-color: rgba(255,0,0,0.3);
 }
 
 .products {
@@ -576,11 +575,83 @@ a {
 }
 
 .product {
+    padding: 10px;
     width: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 
-    background-color: rgba(0,255,0,0.3);
-    height: 250px;
+    /*background-color: rgba(0,255,0,0.3);*/
+    /*height: 250px;*/
+}
+
+.product__display {
+    height: 100%;
+    border: 5px solid #D8D8D8;
+    background-color: white;
+    padding: 20px 30px 15px;
+    margin-bottom: 15px;
+}
+
+.product__img {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.product__price {
+    font-family: "AvenirNext-DemiBold", sans-serif;
+    font-size: 24px;
+    color: #353B46;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.product__add {
+    background-color: #D8D8D8;
+    width: 60px;
+    height: 60px;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    border-radius: 60px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.product__description {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.product__name {
+    -webkit-flex-basis: 0;
+        -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    font-family: "AvenirNext-UltraLight", sans-serif;
+    color: #202020;
+    font-size: 18px;
+}
+
+.product__heart {
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
 }
 
 .cart {
@@ -591,18 +662,73 @@ a {
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    background-color: rgba(255,0,0,0.3);
     overflow: scroll;
-    padding-top: 33px;
+    font-family: "AvenirNext-UltraLight", sans-serif;
+    padding: 0 20px;
+    background-color: #C4CCDA;
 }
 
 .cart-item {
-    height: 150px;
+    /*height: 150px;*/
     margin-bottom: 20px;
-    background: rgba(0,255,0,0.3);
 }
 
-.checkout {
+.cart__title {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 5px 0;
+    font-size: 24px;
+    color: #202020;
+    z-index: 1;
+    background: -webkit-linear-gradient(top, rgba(192,207,221,1), rgba(192,207,221,0.3));
+    background: linear-gradient(to bottom, rgba(192,207,221,1), rgba(192,207,221,0.3));
+}
+
+.cart__content {
+    margin-top: 50px;
+}
+
+.cart-item__top-part {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.cart-item__image {
+    -webkit-flex-basis: 33%;
+        -ms-flex-preferred-size: 33%;
+            flex-basis: 33%;
+}
+
+.cart-item__image img {
+    width: 100%;
+}
+
+.cart-item__top-part__middle {
+    padding-left: 15px;
+    -webkit-flex-basis: 0;
+        -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    font-size: 18px;
+    color: #202020;
+}
+
+.cart-item__price {
+    font-family: "AvenirNext-Regular", sans-serif;
+}
+
+.cart-item__trash {
     -webkit-flex-basis: auto;
         -ms-flex-preferred-size: auto;
             flex-basis: auto;
@@ -610,11 +736,217 @@ a {
     -webkit-flex-grow: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
-    height: 300px;
-    background: rgba(0,0,255,0.3);
 }
 
-.cart__title {
+.cart-item__qty {
+    margin-top: 5px;
+    width: 33%;
+}
+
+.cart-item__qty .adjust-qty {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.adjust-qty__button {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #F7F8FA;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.adjust-qty__number {
+    font-size: 18px;
+    color: #202020;
+    margin: 0 5px;
+}
+
+.cart-checkout-overlay {
     position: fixed;
-    top: 0;
+    bottom: 276px;
+    width: 100%;
+    height: 5%;
+    background: -webkit-linear-gradient(top, transparent, rgba(196,204,218,1));
+    background: linear-gradient(to bottom, transparent, rgba(196,204,218,1));
+}
+
+.checkout {
+    padding: 0 20px 20px;
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    background: -webkit-linear-gradient(top, rgba(196,204,218,1) 10%, transparent);
+    background: linear-gradient(to bottom, rgba(196,204,218,1) 10%, transparent);
+}
+
+.checkout__divider {
+    width: 60%;
+    border-width: 1px 0 0;
+    border-color: #979797;
+    margin-top: 20px;
+}
+
+.checkout__coupon-input {
+    margin-top: 12px;
+    padding: 5px 5px;
+}
+
+.checkout__content {
+    font-family: "AvenirNext-Regular", sans-serif;
+    font-size: 24px;
+    color: #202020;
+}
+
+.checkout-item {
+    margin-top: 5px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.checkout__subtotal {
+    font-family: "AvenirNext-DemiBold", sans-serif;
+}
+
+.checkout__subtotal-content {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+}
+
+.checkout__amount--strikeout {
+    text-decoration: line-through
+}
+
+.checkout__amount--saving {
+    margin-top: 5px;
+    font-family: "AvenirNext-Bold", sans-serif;
+    color: #DC1A00;
+}
+
+.checkout__btn {
+    margin-top: 5px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 90%;
+    height: 60px;
+    border-radius: 3px;
+    background-color: #80A590;
+    color: #F7F8FA;
+    font-size: 24px;
+    font-family: "AvenirNext-DemiBold", sans-serif;
+}
+
+.checkout__btn__icon {
+    margin-right: 24px;
+}
+
+.site__right-sidebar-toggle {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 50px;
+    width: 60px;
+    background: black;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: none;
+}
+
+body.js-show-right-sidebar .site__right-sidebar-toggle {
+    right: 80%;
+}
+
+@media (max-width: 950px) {
+    .site__main {
+        -webkit-flex-basis: 60%;
+            -ms-flex-preferred-size: 60%;
+                flex-basis: 60%;
+    }
+
+    .site__right-sidebar {
+        width: 40%;
+    }
+
+    .product {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .max-width-600-hide {
+        display: none;
+    }
+
+    .site__left-sidebar {
+        display: none;
+    }
+
+    .site__main {
+        -webkit-flex-basis: 100%;
+            -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
+        padding-left: 0;
+    }
+
+    .site__right-sidebar {
+        right: 0;
+        width: 80%;
+        /*opacity: 0.3;*/
+        background-color: #C4CCDA;
+    }
+
+    .site__right-sidebar-toggle {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
 }
