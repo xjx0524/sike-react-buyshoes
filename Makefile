@@ -9,11 +9,16 @@ css:
 .PHONY: js
 js:
 	mkdir -p build
-	babel --watch js/app.jsx --out-file build/app.js
+	webpack --watch --progress js/app.jsx build/app.js --module-bind "js=babel" --module-bind "jsx=babel" -d
+
+.PHONY: minjs
+minjs:
+	mkdir -p bundle
+	webpack --progress js/app.jsx bundle/app.js --module-bind "js=babel" --module-bind "jsx=babel" -p
 
 .PHONY: server
 server:
-	browser-sync start --server --files='index.html,bundle/app.css,build/app.js'
+	browser-sync start --server --files='index.html,bundle/app.css,build/App.js'
 
 .PHONY: clean
 clean:
